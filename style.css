@@ -19,6 +19,52 @@ body {
   background-position: center;
 }
 
+/*************** Header *********************/
+
+.site_header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.header_logo img {
+  display: block;
+  height: 2.5rem;
+  width: auto;
+}
+
+.header_menu {
+  font-family: Montserrat, sans-serif;
+  font-size: 1rem;
+  color: #e5ddb8;
+  background: #982926;
+  border: 1px solid #e5ddb8;
+  border-radius: 3px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+}
+
+.site_header {
+  /*** det er den her kode der ændre farven ved scrolle ***/
+  background-color: transparent;
+  animation: fra-gennemsigtig-til-farve linear both;
+  animation-timeline: scroll();
+  animation-range: calc(100svh - 80px) 100svh;
+}
+
+@keyframes fra-gennemsigtig-til-farve {
+  to {
+    background-color: #982926;
+  }
+}
+
 /*************** Tekst-fonte *********************/
 
 h1 {
@@ -122,4 +168,24 @@ h3 span {
   to {
     transform: rotate(-360deg);
   }
+}
+
+/*************** Footer Design *********************/
+
+footer h1 {
+  font-family: Montserrat, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 200;
+  color: #e5ddb8;
+  line-height: 0.85;
+  text-align: center;
+  margin: 50px 0px 20px;
+}
+
+footer h2 {
+  font-family: Katibeh, serif;
+  font-size: 1.3rem;
+  color: #e5ddb8;
+  line-height: 1;
+  text-align: center;
 }
