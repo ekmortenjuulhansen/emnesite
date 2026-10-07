@@ -33,7 +33,7 @@ h2 {
   font-family: Katibeh, serif;
   font-size: 1.3rem;
   color: #e5ddb8;
-  line-height: 0.95;
+  line-height: 1;
 }
 
 .index_tagline h2 {
@@ -79,4 +79,47 @@ h3 span {
 
 .guide_boxes {
   background-color: #982926;
+}
+
+/*************** Videoguide-box, ramme *********************/
+.video_guide {
+  @media (width>700px) {
+    border: 0.5px solid #e5ddb8;
+  }
+}
+
+/*************** Generator_CTA *********************/
+
+.generator_cta {
+  width: 400px;
+  margin: 0 auto 3rem;
+  padding: 3.5rem;
+  border: 0.5px solid #e5ddb8;
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+
+.generator_cta:hover {
+  background-color: #e5ddb8;
+}
+
+.generator_ikon {
+  padding: 40px;
+  width: 100%;
+  animation: rotation 12s linear infinite;
+  transition: filter 0.3s;
+}
+
+.generator_cta:hover .generator_ikon {
+  filter: brightness(0);
+  cursor: pointer;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
 }

@@ -20,12 +20,9 @@ main {
 
 .video_hero {
   position: absolute;
-  box-sizing: border-box;
-  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
   z-index: -1;
 }
 
@@ -42,13 +39,13 @@ main {
 /*************** Index_Tagline *********************/
 
 .index_tagline {
-  margin: 60px;
+  margin-top: 50px;
   text-align: center;
 }
 
 /*************** Index_Marquee *********************/
 .marquee {
-  margin-top: 60px;
+  margin-top: 100px;
   margin-bottom: 40px;
   width: 100%;
   overflow: hidden;
@@ -103,7 +100,7 @@ main {
   display: grid;
   grid-template-columns: 1fr auto;
   align-content: start;
-  gap: 0.75rem 1rem;
+  gap: 0.5rem 1rem;
   padding: 1.25rem;
   flex: 0 0 85%;
   min-width: 0;
@@ -134,4 +131,21 @@ main {
 .box_compatibility h2,
 .box_compatibility p {
   grid-column: 1;
+}
+
+/*************** Video_Guide *********************/
+
+.video_guide {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  justify-items: center;
+  margin: 0 auto;
+}
+
+/*************** Generator_CTA *********************/
+
+.generator_cta {
+  margin-top: 100px;
 }
