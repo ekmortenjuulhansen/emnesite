@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 img {
   width: 100%;
@@ -13,14 +14,16 @@ img {
 /*************** Baggrund *********************/
 
 body {
-  background-image: image();
+  background-image: url(./imgs/Baggrund\ til\ uploadsite\ 1\ -\ Emnesite.webp);
+  background-size: cover;
+  background-position: center;
 }
 
-/*************** Tekst og fonte *********************/
+/*************** Tekst-fonte *********************/
 
 h1 {
   font-family: Montserrat, sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.75rem;
   font-weight: 200;
   color: #e5ddb8;
   line-height: 0.85;
@@ -28,10 +31,13 @@ h1 {
 
 h2 {
   font-family: Katibeh, serif;
-  font-size: 1.2rem;
-  font-weight: 200;
+  font-size: 1.3rem;
   color: #e5ddb8;
-  line-height: 0.85;
+  line-height: 0.95;
+}
+
+.index_tagline h2 {
+  font-size: 1.75rem;
 }
 
 h3 {
@@ -42,12 +48,18 @@ h3 {
   color: #e5ddb8;
   line-height: 0.85;
   white-space: nowrap;
-  overflow: hidden;
-  width: 100vw;
-  margin-left: 0;
-  margin-right: 0;
+  width: max-content;
   display: block;
 }
+
+p {
+  font-family: Montserrat, sans-serif;
+  font-size: 1rem;
+  font-weight: 200;
+  color: #e5ddb8;
+}
+
+/*************** Tekst-animationer *********************/
 
 h3 span {
   display: inline-block;
@@ -61,4 +73,10 @@ h3 span {
   100% {
     transform: translateX(-100%);
   }
+}
+
+/*************** Guide-box *********************/
+
+.guide_boxes {
+  background-color: #982926;
 }
