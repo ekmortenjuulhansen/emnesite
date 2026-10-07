@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*************** Index_Hero *********************/
+
+.index_hero {
+  position: relative;
+  isolation: isolate; /* gør z-index: -1 på videoen sikkert */
+  width: 100%;
+  height: 100vh; /* fallback til ældre browsere */
+  height: 100svh; /* mobil: præcis det synlige område */
+  overflow: hidden; /* intet må stikke ud over skærmen */
+
+  display: grid;
+  grid-template-rows: 1fr 1fr; /* to lige store halvdele */
+  justify-items: center;
+  text-align: center;
+  padding-inline: 1.5rem;
+}
+
+.video_hero {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fylder hele fladen uden at forvrænge */
+  object-position: center;
+  z-index: -1;
+}
+
+/* h1 sidder nederst i øverste halvdel = lidt over midten */
+.index_hero h1 {
+  align-self: end;
+  padding-bottom: 8rem;
+}
+
+/* h2 sidder øverst i nederste halvdel = lidt under midten */
+.index_hero h2 {
+  align-self: start;
+  padding-top: 8rem;
+}

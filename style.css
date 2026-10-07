@@ -10,16 +10,55 @@ img {
   display: block;
 }
 
-video {
-  width: 100%;
-  height: auto;
-  display: block;
+/*************** Baggrund *********************/
+
+body {
+  background-image: image();
 }
 
 /*************** Tekst og fonte *********************/
 
 h1 {
   font-family: Montserrat, sans-serif;
+  font-size: 2.5rem;
   font-weight: 200;
   color: #e5ddb8;
+  line-height: 0.85;
+}
+
+h2 {
+  font-family: Katibeh, serif;
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: #e5ddb8;
+  line-height: 0.85;
+}
+
+h3 {
+  font-family: Montserrat, sans-serif;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 200;
+  color: #e5ddb8;
+  line-height: 0.85;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100vw;
+  margin-left: 0;
+  margin-right: 0;
+  display: block;
+}
+
+h3 span {
+  display: inline-block;
+  animation: tekst_ruller_over_skærm 8s linear infinite;
+}
+
+@keyframes tekst_ruller_over_skærm {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
