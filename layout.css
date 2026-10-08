@@ -149,3 +149,17 @@ main {
 .generator_cta {
   margin-top: 100px;
 }
+
+/*************** Generator / upload form *********************/
+
+.generator_form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  justify-items: center;
+  text-align: center;
+  border: 0.5px solid #e5ddb8;
+  width: 100%;
+  padding: 8rem 1rem 8rem 1rem; /*** rækkefølgen er: top, højre, bund, venstre***/
+  margin-top: 10rem;
+}
