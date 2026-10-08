@@ -77,12 +77,9 @@ main {
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
 }
-.guide_slider::-webkit-scrollbar {
-  display: none;
-}
 
 /*** DESKTOP: 5 bokse i række og Compatibility under som i prototypen ***/
-@media (width>900px) /*Jeg laver den her på 900px da den ellers brækker forkert over med overskriften i guide, så den ikke er læsbar*/ {
+@media (width>800px) /*Jeg laver den her på 900px da den ellers brækker forkert over med overskriften i guide, så den ikke er læsbar*/ {
   .guide_slider {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -98,11 +95,11 @@ main {
 
 .guide_boxes {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr auto; /***** det betyder at der er to kolonner men den første fylder alt det er er plads til ift. auto's størrelse***/
   align-content: start;
   gap: 0.5rem 1rem;
   padding: 1.25rem;
-  flex: 0 0 85%;
+  flex: 0 0 85%; /***1. tal: siger at box ikke må vokse***/
   min-width: 0;
   scroll-snap-align: center;
 }
@@ -124,15 +121,6 @@ main {
   height: auto;
 }
 
-.box_compatibility {
-  grid-template-columns: 1fr;
-  text-align: center;
-}
-.box_compatibility h2,
-.box_compatibility p {
-  grid-column: 1;
-}
-
 /*************** Video_Guide *********************/
 
 .video_guide {
@@ -152,14 +140,8 @@ main {
 
 /*************** Generator / upload form *********************/
 
-.generator_form {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  justify-items: center;
-  text-align: center;
-  border: 0.5px solid #e5ddb8;
-  width: 100%;
-  padding: 8rem 1rem 8rem 1rem; /*** rækkefølgen er: top, højre, bund, venstre***/
-  margin-top: 10rem;
+@media (width>800px) {
+  .generator_cta {
+    width: 500px;
+  }
 }

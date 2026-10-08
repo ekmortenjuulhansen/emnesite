@@ -10,6 +10,7 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Katibeh&display=swap" rel="stylesheet">
 
+    <link rel="icon" href="./favicon.ico" />
 
     <title>Unique Piano Generator</title>
     <link rel="stylesheet" href="style.css">
@@ -22,7 +23,17 @@
         <a href="index.html" class="header_logo">
             <img src="./svg_ikoner/emnesite_logo.svg" alt="Unique Piano Generator Logo">
         </a>
+
         <button class="header_menu">MENU</button>
+
+        <nav>
+            <ul>
+                <li> <a href="#how-it-works">how it works</a></li>
+                <li> <a href="#recording-guide">recording guide</a></li>
+                <li> <a href="#generator">generator</a></li>
+                <li> <a href="generator-basics.html" target="_blank" rel="noopener">upload now</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
@@ -38,7 +49,7 @@
             <h2>YOU CREATE THE SOUND.<br>WE BUILD YOUR INSTRUMENT!</h2>
         </div>
 
-        <section class="marquee">
+        <section id="how-it-works" class="marquee">
             <h3><span>how it works &emsp;&emsp; </span>
                 <span>how it works &emsp;&emsp; </span>
                 <span>how it works &emsp;&emsp; </span>
@@ -89,7 +100,7 @@
         </section>
 
 
-        <section class="marquee">
+        <section id="recording-guide" class="marquee">
             <h3><span>watch recording guide &emsp;&emsp;</span>
                 <span>watch recording guide &emsp;&emsp;</span>
                 <span>watch recording guide &emsp;&emsp;</span>
@@ -104,7 +115,7 @@
         <video class="video_guide" src="./video/sampe_guide_emnesite.mp4" controls
             poster="./imgs/emnesite_recording_guide_thumbnail.webp"></video>
 
-        <a class="generator_cta" href="generator-basics.html">
+        <a id="generator" class="generator_cta" href="generator-basics.html">
             <img class="generator_ikon" src="./svg_ikoner/generator_ikon_final.svg" alt="Logo - Rotating Generator">
         </a>
 
@@ -116,6 +127,7 @@
 
     </footer>
 
+    <script src="menu.js"></script>
 
 </body>
 

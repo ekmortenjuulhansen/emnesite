@@ -40,17 +40,6 @@ body {
   width: auto;
 }
 
-.header_menu {
-  font-family: Montserrat, sans-serif;
-  font-size: 1rem;
-  color: #e5ddb8;
-  background: #982926;
-  border: 1px solid #e5ddb8;
-  border-radius: 3px;
-  padding: 0.4rem 0.8rem;
-  cursor: pointer;
-}
-
 .site_header {
   /*** det er den her kode der ændre farven ved scrolle ***/
   background-color: transparent;
@@ -63,6 +52,49 @@ body {
   to {
     background-color: #982926;
   }
+}
+
+/*************** Menu-knap *********************/
+
+.header_menu {
+  font-family: Montserrat, sans-serif;
+  font-size: 1rem;
+  color: #e5ddb8;
+  background: #982926;
+  border: 1px solid #e5ddb8;
+  border-radius: 3px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+}
+
+/*************** Dropdown-menu *********************/
+
+nav {
+  display: none;
+  position: fixed;
+  top: 4.5rem; /*** gør sådan at den røde header og menu hænger sammen ***/
+  width: 100%;
+  z-index: 100;
+  background-color: #982926;
+  padding: 1rem 1rem;
+  text-align: end;
+}
+
+nav.active {
+  display: block;
+}
+
+nav li {
+  margin: 0.5rem 2.3rem 0rem 0rem; /* styrer margin, så tekst flytter sig */
+}
+
+/* Udseende på linkene */
+nav a {
+  font-family: Montserrat, sans-serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 200;
+  color: #e5ddb8;
 }
 
 /*************** Tekst-fonte *********************/
@@ -92,8 +124,8 @@ h3 {
   font-style: italic;
   font-weight: 200;
   color: #e5ddb8;
-  white-space: nowrap;
-  width: max-content;
+  white-space: nowrap; /*** sørger for at alt blir på en linje ***/
+
   display: block;
 }
 
@@ -124,6 +156,7 @@ h3 span {
 
 .guide_boxes {
   background-color: #982926;
+  border: 1px solid #681815;
 }
 
 /*************** Videoguide-box, ramme *********************/
@@ -137,15 +170,15 @@ h3 span {
   }
 }
 
-/*************** Generator CTA *********************/
+/*************** Generator CTA-knap *********************/
 
 .generator_cta {
   display: block;
   width: 300px;
   max-width: 100%;
   margin: 0 auto 3rem;
-  padding: 2rem;
-  border: 0.5px solid #e5ddb8;
+  padding: 4.5rem;
+  border: 1px solid #e5ddb8;
   background-color: transparent;
   text-decoration: none;
   cursor: pointer;
@@ -158,9 +191,8 @@ h3 span {
 
 .generator_ikon {
   display: block;
-  padding: 40px;
   width: 100%;
-  animation: rotation 12s linear infinite;
+  animation: rotation 14s linear infinite;
   transition: filter 0.3s;
 }
 
@@ -175,13 +207,6 @@ h3 span {
   to {
     transform: rotate(-360deg);
   }
-}
-
-/*************** Generator Form *********************/
-
-.generator_form {
-  border: 0.5px solid #e5ddb8;
-  margin: 1rem;
 }
 
 /*************** Footer Design *********************/
