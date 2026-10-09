@@ -209,9 +209,7 @@ h3 span {
   }
 }
 
-/*************** UPLOAD-FORM - Trinindikator *********************/
-
-/** Trin-cirkler **/
+/*************** Generator-form - Trinindikator *********************/
 
 .trin h3 {
   width: 80px;
@@ -222,33 +220,47 @@ h3 span {
   color: #33231c;
   font-style: normal;
   font-size: 2rem;
-  line-height: 80px; /* tallet står lodret i midten */
+  line-height: 80px;
   text-align: center;
 }
 
+.active_trin h3 {
+  background-color: #3f6b4f;
+  color: #e5ddb8;
+  border: 4px solid #e5ddb8;
+}
 .trin h2 {
   font-size: 1.2rem;
   text-align: center;
 }
 
-/*************** UPLOAD-FORM - selve uploads*********************/
+/*************** Genrator-form - Basics *********************/
 
 .generator_form {
   border: 2px solid #e5ddb8;
   border-radius: 4px;
 }
 
-.upload_form {
-  padding: 1rem;
+.generator_form h3 {
+  color: #982926;
+}
 
+.generator_basics {
+  padding: 1rem;
   border-radius: 4px;
   font-family: Montserrat, sans-serif;
   font-size: 1rem;
-  color: #e5ddb8;
+}
+
+input {
+  background-color: #e5ddb8;
+  border: 3px solid #33231c;
+  padding: 1rem;
+  color: #33231c;
   text-align: center;
 }
 
-.upload_form input::placeholder {
+.generator_basics input::placeholder {
   color: #33231c;
   text-transform: uppercase;
 }
@@ -277,6 +289,26 @@ h3 span {
 .save_knap:hover {
   background-color: #e5ddb8;
   color: #3f6b4f;
+}
+
+.back_knap {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  width: 100px;
+  height: 30px;
+  background-color: #982926;
+  border: 1px solid #e5ddb8;
+  color: #e5ddb8;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.back_knap:hover {
+  background-color: #e5ddb8;
+  color: #982926;
 }
 
 /*************** Footer Design *********************/

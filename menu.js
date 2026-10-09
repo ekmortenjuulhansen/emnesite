@@ -8,12 +8,12 @@ function burgerClick() {
   nav.classList.toggle("active");
 }
 
-/***  Så menuen lukker ***/
+/***  Så menuen lukker ved klik ***/
 links.forEach(function (link) {
   link.addEventListener("click", lukMenu);
 });
 
-/***  Så menuen lukker ***/
+/***  Så menuen lukker ved klik ***/
 function lukMenu() {
   burger.classList.remove("active");
   nav.classList.remove("active");

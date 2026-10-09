@@ -28,13 +28,13 @@ main {
 }
 
 .index_hero h1 {
-  align-self: end;
-  padding-bottom: 8rem;
+  grid-row: 1;
+  padding-top: 10rem;
 }
 
 .index_hero h2 {
-  align-self: start;
-  padding-top: 16rem;
+  grid-row: 2;
+  padding-top: 10rem;
 }
 
 /*************** Index_Tagline *********************/
@@ -70,7 +70,7 @@ main {
   z-index: -1;
 }
 
-/*** Swipe-slideren til mobil-visning ***/
+/*** note: Swipe-slideren til mobil-visning ***/
 .guide_slider {
   display: flex;
   gap: 1rem;
@@ -79,7 +79,7 @@ main {
   scrollbar-width: none;
 }
 
-/*** DESKTOP: 5 bokse i række og Compatibility under som i prototypen ***/
+/*** note: DESKTOP: 5 bokse i række og Compatibility under som i prototypen ***/
 @media (width>800px) /*Jeg laver den her på 900px da den ellers brækker forkert over med overskriften i guide, så den ikke er læsbar*/ {
   .guide_slider {
     display: grid;
@@ -96,11 +96,11 @@ main {
 
 .guide_boxes {
   display: grid;
-  grid-template-columns: 1fr auto; /***** det betyder at der er to kolonner men den første fylder alt det er er plads til ift. auto's størrelse***/
+  grid-template-columns: 1fr auto; /***** note: det betyder at der er to kolonner men den første fylder alt det er er plads til ift. auto's størrelse***/
   align-content: start;
   gap: 0.5rem 1rem;
   padding: 1.25rem;
-  flex: 0 0 85%; /***1. tal: siger at box ikke må vokse***/
+  flex: 0 0 85%; /***note: 1. tal: siger at box ikke må vokse***/
   min-width: 0;
   scroll-snap-align: center;
 }
@@ -147,7 +147,7 @@ main {
   }
 }
 
-/*************** UPLOAD-FORM - Trinindikator *********************/
+/*************** Generator - Trinindikator *********************/
 
 .trinindikator {
   display: grid;
@@ -168,7 +168,7 @@ main {
 .pil_generator_sites {
   width: 30px;
   align-self: start;
-  margin-top: 40px; /* halvdelen af cirklens højde = midt ud for cirklen */
+  margin-top: 40px;
 }
 
 @media (min-width: 800px) {
@@ -177,35 +177,33 @@ main {
   }
 }
 
-/*************** UPLOAD-FORM *********************/
+/*************** Generator-form *********************/
 
 .generator_form {
-  position: relative;
   display: grid;
   justify-items: center;
-  text-align: center;
   padding: 2rem 1.5rem;
   margin: 4rem 1.5rem 0 1.5rem;
 }
 
+/**** Basics ****/
 /* MOBIL: alt under hinanden */
-.upload_form {
+.generator_basics {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
   width: 100%;
 }
 
-.upload_form input {
+.generator_basics input {
   width: 100%;
 }
 
 /**** DESKTOP: så den kommer op i 2 kolonner ****/
-@media (min-width: 900px) {
-  .demo_form {
+@media (min-width: 800px) {
+  .generator_basics {
     grid-template-columns: 1fr 1fr;
     gap: 1rem 2rem;
-    max-width: 200px;
   }
   .felt_navn {
     grid-column: 1;
@@ -225,19 +223,28 @@ main {
   }
 }
 
-.save_knap {
-  margin-top: 2rem;
-  justify-self: end;
-  text-decoration: none;
+/**** Upload ****/
+.generator_upload {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 100%;
 }
 
-/*************** UPLOAD-FORM - selve uploads *********************/
+/*************** Save-knap *********************/
 
-.generator_form {
-  position: relative;
-  display: block;
-  justify-items: center;
-  text-align: center;
-  padding-inline: 1.5rem;
-  margin-top: 4rem;
+.back_save {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2rem;
+}
+
+.save_knap {
+  margin-right: 1.5rem;
+  justify-self: end;
+}
+
+.back_knap {
+  margin-left: 1.5rem;
+  justify-self: start;
 }

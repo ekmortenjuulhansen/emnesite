@@ -12,7 +12,7 @@
 
     <link rel="icon" href="./favicon.ico" />
 
-    <title>Unique Piano Generator</title>
+    <title>Generator - Upload</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="layout.css">
 </head>
@@ -30,7 +30,7 @@
 
 
         <div class="trinindikator">
-            <div class="trin upload_trin">
+            <div class="trin upload_trin active_trin">
                 <h3>1</h3>
                 <h2>UPLOAD</h2>
             </div>
@@ -51,6 +51,19 @@
             </div>
         </div>
 
+        <div class="generator_form">
+            <h3> YOUR UNIQUE SAMPLES</h3>
+
+            <form class="generator_upload" onsubmit="return false">
+                <label for="upload_samle">Upload your samples:</label>
+                <input type="file" id="upload_sample" name="UploadSample" accept="audio/*">
+            </form>
+        </div>
+
+        <div class="back_save">
+            <a class="back_knap" href="generator-basics.html">← BACK</a>
+            <a class="save_knap" href="generator-upload.html">SAVE →</a>
+        </div>
 
     </main>
 
