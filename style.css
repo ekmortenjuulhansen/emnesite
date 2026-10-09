@@ -166,7 +166,7 @@ h3 span {
   }
 
   @media (width > 700px) {
-    border: 0.5px solid #e5ddb8;
+    border: 1.5px solid #e5ddb8;
   }
 }
 
@@ -207,6 +207,76 @@ h3 span {
   to {
     transform: rotate(-360deg);
   }
+}
+
+/*************** UPLOAD-FORM - Trinindikator *********************/
+
+/** Trin-cirkler **/
+
+.trin h3 {
+  width: 80px;
+  height: 80px;
+  border: 4px solid #33231c;
+  border-radius: 50%;
+  background-color: #e5ddb8;
+  color: #33231c;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 80px; /* tallet står lodret i midten */
+  text-align: center;
+}
+
+.trin h2 {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/*************** UPLOAD-FORM - selve uploads*********************/
+
+.generator_form {
+  border: 2px solid #e5ddb8;
+  border-radius: 4px;
+}
+
+.upload_form {
+  padding: 1rem;
+
+  border-radius: 4px;
+  font-family: Montserrat, sans-serif;
+  font-size: 1rem;
+  color: #e5ddb8;
+  text-align: center;
+}
+
+.upload_form input::placeholder {
+  color: #33231c;
+  text-transform: uppercase;
+}
+
+.felt_email p {
+  margin-top: 0.75rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.save_knap {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  width: 100px;
+  height: 30px;
+  background-color: #3f6b4f;
+  border: 1px solid #e5ddb8;
+  color: #e5ddb8;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.save_knap:hover {
+  background-color: #e5ddb8;
+  color: #3f6b4f;
 }
 
 /*************** Footer Design *********************/

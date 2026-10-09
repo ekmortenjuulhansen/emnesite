@@ -1,5 +1,6 @@
 main {
   margin-inline: auto;
+  max-width: 1200px;
 }
 
 /*************** Index_Hero *********************/
@@ -8,8 +9,8 @@ main {
   position: relative;
   isolation: isolate;
   width: 100%;
-  height: 100vh;
-  height: 100svh;
+  height: 100vh; /*** De her to får hero til at fylde hele skærmens højde på både mobil og desktop ***/
+  height: 100svh; /*** De her to får hero til at fylde hele skærmens højde på både mobil og desktop ***/
   overflow: hidden;
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -135,13 +136,108 @@ main {
 /*************** Generator_CTA *********************/
 
 .generator_cta {
-  margin-top: 100px;
+  margin-top: 130px;
 }
 
-/*************** Generator / upload form *********************/
+/*************** Generator / upload form  på Indexet *********************/
 
 @media (width>800px) {
   .generator_cta {
     width: 500px;
   }
+}
+
+/*************** UPLOAD-FORM - Trinindikator *********************/
+
+.trinindikator {
+  display: grid;
+  grid-template-columns: repeat(7, auto); /* 4 trin + 3 pile = 7 kolonner */
+  justify-content: center;
+  align-items: start;
+  column-gap: 0.5rem;
+  padding-inline: 1.5rem;
+  margin-top: 8rem;
+}
+
+.trin {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+}
+
+.pil_generator_sites {
+  width: 30px;
+  align-self: start;
+  margin-top: 40px; /* halvdelen af cirklens højde = midt ud for cirklen */
+}
+
+@media (min-width: 800px) {
+  .trinindikator {
+    scale: 1.2;
+  }
+}
+
+/*************** UPLOAD-FORM *********************/
+
+.generator_form {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  margin: 4rem 1.5rem 0 1.5rem;
+}
+
+/* MOBIL: alt under hinanden */
+.upload_form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 100%;
+}
+
+.upload_form input {
+  width: 100%;
+}
+
+/**** DESKTOP: så den kommer op i 2 kolonner ****/
+@media (min-width: 900px) {
+  .demo_form {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 2rem;
+    max-width: 200px;
+  }
+  .felt_navn {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .felt_email {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .felt_instrument {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .felt_billede {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+.save_knap {
+  margin-top: 2rem;
+  justify-self: end;
+  text-decoration: none;
+}
+
+/*************** UPLOAD-FORM - selve uploads *********************/
+
+.generator_form {
+  position: relative;
+  display: block;
+  justify-items: center;
+  text-align: center;
+  padding-inline: 1.5rem;
+  margin-top: 4rem;
 }
