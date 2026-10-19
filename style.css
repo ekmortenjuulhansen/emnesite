@@ -271,11 +271,15 @@ input {
   font-size: 0.8rem;
 }
 
+.done_form_text_center {
+  text-align: center;
+}
+
 .save_knap {
   display: block;
   text-decoration: none;
   text-align: center;
-  width: 100px;
+  width: 150px;
   height: 30px;
   background-color: #3f6b4f;
   border: 1px solid #e5ddb8;
