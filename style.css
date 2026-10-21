@@ -16,7 +16,7 @@ img {
 body {
   background-image: url(./imgs/Baggrund\ til\ uploadsite\ 1\ -\ Emnesite.webp);
   background: cover fixed;
-  background-position: center;
+  background-attachment: fixed;
 }
 
 /*************** Header *********************/
@@ -185,19 +185,11 @@ h3 span {
   transition: background-color 0.3s;
 }
 
-.generator_cta:hover {
-  background-color: #e5ddb8;
-}
-
 .generator_ikon {
   display: block;
   width: 100%;
   animation: rotation 14s linear infinite;
   transition: filter 0.3s;
-}
-
-.generator_cta:hover .generator_ikon {
-  filter: brightness(0);
 }
 
 @keyframes rotation {
@@ -207,6 +199,14 @@ h3 span {
   to {
     transform: rotate(-360deg);
   }
+}
+
+.generator_cta:hover {
+  background-color: #e5ddb8;
+}
+
+.generator_cta:hover .generator_ikon {
+  filter: brightness(0);
 }
 
 /*************** Generator-form - Trinindikator *********************/
